@@ -5,35 +5,28 @@ import products from "../data/products";
 function Home() {
   return (
     <div className=" relative w-full h-full mb-11 ">
-       
       <div className="h-96">
         <img src={blog1} alt="" className="w-full h-full object-cover z-auto" />
       </div>
 
-      <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-100 py-0 sm:py-8">
-        <div class="mx-auto max-w-screen-xl py-4 px-4 w-full">
-          <h2 class=" flex align-center justify-center mb-4 font-bold text-2xl text-gray-600">
+      <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-100 py-0 sm:py-8">
+        <div className="mx-auto max-w-screen-xl py-4 px-4 w-full">
+          <h2 className =" flex align-center justify-center mb-4 font-bold text-2xl text-gray-600">
             Our Products Lists
           </h2>
           <div className="grid w-full grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-items-center gap-6  m-auto">
-            {products.map((products) => (
-              <div class="">
-                <div
-                  key={products.id}
-                  class="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm"
-                >
-                
-                  <div class="h-auto overflow-hidden">
-                    <div class="h-44 overflow-hidden relative">
-                      <img src={products.image} alt="" />
+            {products.map((product) => (
+              <div key={product.id} >
+                <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+                  <div className="h-auto overflow-hidden">
+                    <div className="h-44 overflow-hidden relative">
+                      <img src={product.image} alt="" />
                     </div>
                   </div>
-                  <div class="bg-white py-4 px-3">
-                    <h3 class="text-xs mb-2 font-medium">{products.name}</h3>
-                    <div class="flex justify-between items-center">
-                      <p class="text-xs text-gray-400">
-                        {products.description}
-                      </p>
+                  <div className="bg-white py-4 px-3">
+                    <h3 className="text-xs mb-2 font-medium">{product.name}</h3>
+                    <div className="flex justify-between items-center">
+                      <p className="text-xs text-gray-400">{product.description}</p>
                     </div>
                   </div>
                 </div>
